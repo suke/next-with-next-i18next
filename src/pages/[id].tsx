@@ -1,13 +1,11 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import type { GetServerSidePropsContext, NextPage } from "next";
-import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import requiredNamespaces from "../required-namespaces.json";
 
 const HomePage: NextPage = () => (
   <div>
-    <Header />
     <main></main>
     <Footer />
   </div>
@@ -20,7 +18,7 @@ export async function getServerSideProps({
     props: {
       ...(await serverSideTranslations(
         locale,
-        requiredNamespaces["/pages/index"]
+        requiredNamespaces["/pages/[id]"]
       )),
     },
   };

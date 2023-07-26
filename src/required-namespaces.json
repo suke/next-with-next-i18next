@@ -1,0 +1,4 @@
+{
+  "/pages/[id]": ["footer"],
+  "/pages/index": ["header", "components/button", "footer"]
+}
